@@ -38,3 +38,13 @@ export default {
     }
 }
 </script>
+
+<style scoped lang="less">
+    #app{
+        @base-color: green;
+        >div {
+            background: @base-color;
+        }
+    }
+
+</style>

@@ -1,31 +1,54 @@
 <template>
-    <div id="hello">
+    <div id="hello" class="row">
         <img src="http://vuejs.org/images/logo.png">
         <h1>{{ msg }}</h1>
-        <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
+        <form class="form-signin col-md-4 col-md-offset-4">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <div class="form-group">
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            </div>
+            <hr>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </div>
+
+        </form>
     </div>
 </template>
 
 <script>
 export default {
+
     name: 'login',
+
     data () {
         return {
             msg: 'Login to Your Vue.js App'
         }
+    },
+
+    show() {
+        this.addClass('hidden')
+    },
+
+    hide() {
+        this.removeClass('hidden')
     }
+
+
+
 }
 </script>
 
@@ -49,7 +72,7 @@ ul {
 }
 
 li {
-    display: inline-block;
+    display: inline;
     margin: 0 10px;
 }
 
